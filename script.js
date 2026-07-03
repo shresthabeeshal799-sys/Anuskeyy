@@ -193,8 +193,8 @@ function finishDate(){
 
         <br><br>
 
-        💸 <b>Payment:</b><br>
-        ${selectedPay}
+         <b>:</b><br>
+        ${selected}
 
         <br><br>
 
