@@ -124,14 +124,14 @@ function pickDate(type){
 
     card.innerHTML = `
 
-    <h1>💸 Tw lagxas ki?</h1>
+    <h1>💸 koley lagxa?</h1>
 
-    <button class="option" onclick="payChoice('Timi lagxau 😆')">
-    😆 Tw lagxas
+    <button class="option" onclick="choice(' ma lagxu😆')">
+    😆 ma lagxu
     </button>
 
-    <button class="option" onclick="payChoice('Ma lagchu ❤️')">
-    ❤️ Ma lagam
+    <button class="option" onclick="Choice('ta lagxas ❤️')">
+    ❤️ ta lagxas
     </button>
 
     `;
