@@ -124,7 +124,7 @@ function pickDate(type){
 
     card.innerHTML = `
 
-    <h1>💸 koley lagxa?</h1>
+    <h1> koley lagxa?</h1>
 
     <button class="option" onclick="choice(' ma lagxu😆')">
     😆 ma lagxu
@@ -138,9 +138,9 @@ function pickDate(type){
 
 }
 
-function payChoice(choice){
+function Choice(choice){
 
-    selectedPay = choice;
+    selected = choice;
 
     card.innerHTML = `
 
