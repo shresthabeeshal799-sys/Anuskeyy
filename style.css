@@ -22,7 +22,6 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* CARD */
 .card{
     width:90%;
     max-width:430px;
@@ -39,8 +38,14 @@ body{
 }
 
 @keyframes pop{
-    from{transform:scale(.8);opacity:0;}
-    to{transform:scale(1);opacity:1;}
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 h1{
@@ -50,7 +55,6 @@ h1{
     text-shadow:0 3px 8px rgba(0,0,0,.2);
 }
 
-/* BUTTONS */
 .btns{
     display:flex;
     justify-content:center;
@@ -91,11 +95,16 @@ button{
 }
 
 @keyframes fade{
-    from{opacity:0;transform:translateY(10px);}
-    to{opacity:1;transform:translateY(0);}
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-/* MUSIC BUTTON */
 #musicBtn{
     position:fixed;
     top:20px;
@@ -108,7 +117,6 @@ button{
     z-index:10;
 }
 
-/* HEARTS */
 #hearts{
     position:fixed;
     inset:0;
@@ -124,11 +132,16 @@ button{
 }
 
 @keyframes float{
-    from{transform:translateY(110vh) scale(.6);opacity:1;}
-    to{transform:translateY(-20vh) scale(1.3);opacity:0;}
+    from{
+        transform:translateY(110vh) scale(.6);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-20vh) scale(1.3);
+        opacity:0;
+    }
 }
 
-/* OPTIONS BUTTON */
 .option{
     width:100%;
     margin:12px 0;
@@ -136,7 +149,6 @@ button{
     color:white;
 }
 
-/* INPUT */
 input{
     width:100%;
     padding:12px;
@@ -146,34 +158,19 @@ input{
     font-size:18px;
 }
 
-/* ⭐ SIGNATURE CANVAS FIX */
-canvas{
-    width:100%;
-    max-width:320px;
-    height:160px;
-    border-radius:12px;
-    touch-action:none;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-/* MOBILE */
 @media(max-width:500px){
 
 h1{
-    font-size:25px;
+font-size:25px;
 }
 
 button{
-    font-size:16px;
-    padding:12px 24px;
+font-size:16px;
+padding:12px 24px;
 }
 
 .card{
-    padding:25px;
+padding:25px;
 }
 
-/* signature mobile adjustment */
-canvas{
-    height:140px;
-}
 }
