@@ -125,23 +125,23 @@ function pickDate(type){
 
     card.innerHTML = `
 
-    <h1> tw lagxas ki ma?</h1>
+    <h1>💸 Tw lagxas ki?</h1>
 
-    <button class="option" onclick="payChoice('maa 😆')">
-    😆 maa
+    <button class="option" onclick="payChoice('Timi lagxau 😆')">
+    😆 Tw lagxas
     </button>
 
-    <button class="option" onclick="payChoice('tw ❤️')">
-    ❤️ tw
+    <button class="option" onclick="payChoice('Ma lagchu ❤️')">
+    ❤️ Ma lagam
     </button>
 
     `;
 
 }
 
-function pChoice(choice){
+function payChoice(choice){
 
-    selected = choice;
+    selectedPay = choice;
 
     card.innerHTML = `
 
@@ -194,8 +194,8 @@ function finishDate(){
 
         <br><br>
 
-        <b>:</b><br>
-        ${selected}
+        💸 <b>Payment:</b><br>
+        ${selectedPay}
 
         <br><br>
 
