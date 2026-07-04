@@ -125,23 +125,23 @@ function pickDate(type){
 
     card.innerHTML = `
 
-    <h1>tw lagxas ki ma?</h1>
+    <h1> tw lagxas ki ma?</h1>
 
-    <button class="option" onclick="Choice('ma😆')">
-    😆 ma
+    <button class="option" onclick="payChoice('maa 😆')">
+    😆 maa
     </button>
 
-    <button class="option" onclick="Choice(' tww ❤️')">
-    ❤️ tww
+    <button class="option" onclick="payChoice('tw ❤️')">
+    ❤️ tw
     </button>
 
     `;
 
 }
 
-function payChoice(choice){
+function pChoice(choice){
 
-    selected= choice;
+    selected = choice;
 
     card.innerHTML = `
 
@@ -194,8 +194,8 @@ function finishDate(){
 
         <br><br>
 
-        <b>choice:</b><br>
-        ${selectedchoice}
+        <b>:</b><br>
+        ${selected}
 
         <br><br>
 
@@ -219,3 +219,89 @@ function finishDate(){
     `;
 
 }
+// ==========================
+// PART 3C (Final)
+// ==========================
+
+// Extra floating hearts
+setInterval(() => {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (18 + Math.random()*28) + "px";
+    heart.style.animationDuration = (4 + Math.random()*4) + "s";
+
+    hearts.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+
+},600);
+
+// Popup animation
+const popupStyle = [
+    "Please jam na 🥺❤️",
+    "Hyaa... kasto hora 😒",
+    "Please please 😭",
+    "Last chance 😭❤️"
+];
+
+// Music autoplay after first touch
+document.body.addEventListener("click", () => {
+    if(!playing){
+        bgMusic.play().catch(()=>{});
+        playing=true;
+        musicBtn.innerHTML="⏸";
+    }
+},{once:true});
+
+// Sparkle effect
+setInterval(()=>{
+
+    const s=document.createElement("div");
+
+    s.innerHTML="✨";
+
+    s.style.position="fixed";
+    s.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*100+"vh";
+    s.style.fontSize=(10+Math.random()*18)+"px";
+    s.style.pointerEvents="none";
+    s.style.opacity="1";
+    s.style.transition="2s";
+
+    document.body.appendChild(s);
+
+    setTimeout(()=>{
+        s.style.opacity="0";
+        s.style.transform="translateY(-40px)";
+    },50);
+
+    setTimeout(()=>{
+        s.remove();
+    },2200);
+
+},700);
+
+// Welcome animation
+window.onload=()=>{
+
+    card.animate([
+        {
+            transform:"scale(.8)",
+            opacity:0
+        },
+        {
+            transform:"scale(1)",
+            opacity:1
+        }
+    ],{
+        duration:700,
+        fill:"forwards"
+    });
+
+};
